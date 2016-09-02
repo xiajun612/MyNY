@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d3c2b27d-1ce2-4a03-be94-d762dfe63f49" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6001/UserRoleService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserRoleService.xsd" MetadataType="Schema" ID="c8f06ddd-1b58-4e49-97f4-0b034585e876" SourceId="1" SourceUrl="http://localhost:6001/UserRoleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserRoleService1.xsd" MetadataType="Schema" ID="79dffd91-6007-4b72-856a-aee4117f8366" SourceId="1" SourceUrl="http://localhost:6001/UserRoleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserRoleService.wsdl" MetadataType="Wsdl" ID="1145fde6-92d8-45dc-8cc9-95cc50407ed9" SourceId="1" SourceUrl="http://localhost:6001/UserRoleService.svc?wsdl" />
+    <MetadataFile FileName="UserRoleService2.xsd" MetadataType="Schema" ID="00be3426-191e-4d9a-9e52-748b66417255" SourceId="1" SourceUrl="http://localhost:6001/UserRoleService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UserRoleService3.xsd" MetadataType="Schema" ID="fae7f5a9-ab95-4cfa-bffb-d2b85a09f125" SourceId="1" SourceUrl="http://localhost:6001/UserRoleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserRoleService4.xsd" MetadataType="Schema" ID="3ca95ce1-e76e-4d2f-8127-ac7fe5c7181a" SourceId="1" SourceUrl="http://localhost:6001/UserRoleService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NY.Server.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:NY.Server.Utility.CommonResult">
+            <summary>
+            Author:xxp
+            Remark:返回对象信息
+            CreateDate:20160816
+            </summary>
+        </member>
+        <member name="M:NY.Server.Utility.CommonResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:NY.Server.Utility.CommonResult.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:NY.Server.Utility.CommonResult.Message">
+            <summary>
+            返回给客户端的信息
+            </summary>
+        </member>
+        <member name="P:NY.Server.Utility.CommonResult.StackTrace">
+            <summary>
+            错误堆栈
+            </summary>
+        </member>
+        <member name="P:NY.Server.Utility.CommonResult.RetData">
+            <summary>
+            附属结果
+            </summary>
+        </member>
+    </members>
+</doc>

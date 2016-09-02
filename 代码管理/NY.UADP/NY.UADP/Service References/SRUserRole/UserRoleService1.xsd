@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NY.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NY.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="UAD_User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UAD_Role" nillable="true" type="tns:ArrayOfUAD_Role" />
+      <xs:element minOccurs="0" name="bLogined" type="xs:boolean" />
+      <xs:element minOccurs="0" name="bStop" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cDepName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cMobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cUser_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cUser_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cUser_Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dLastLoginDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="iAuthMode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="iErrorCount" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UAD_User" nillable="true" type="tns:UAD_User" />
+  <xs:complexType name="ArrayOfUAD_Role">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UAD_Role" nillable="true" type="tns:UAD_Role" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUAD_Role" nillable="true" type="tns:ArrayOfUAD_Role" />
+  <xs:complexType name="UAD_Role">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UAD_User" nillable="true" type="tns:ArrayOfUAD_User" />
+      <xs:element minOccurs="0" name="bAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cRole_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cRole_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UAD_Role" nillable="true" type="tns:UAD_Role" />
+  <xs:complexType name="ArrayOfUAD_User">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UAD_User" nillable="true" type="tns:UAD_User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUAD_User" nillable="true" type="tns:ArrayOfUAD_User" />
+</xs:schema>

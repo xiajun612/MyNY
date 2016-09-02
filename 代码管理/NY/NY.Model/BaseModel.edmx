@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NY.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UAD_Role">
+          <Key>
+            <PropertyRef Name="cRole_Id" />
+          </Key>
+          <Property Name="cRole_Id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="cRole_Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="cMemo" Type="nvarchar" MaxLength="120" />
+          <Property Name="bAdmin" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UAD_User">
+          <Key>
+            <PropertyRef Name="cUser_Id" />
+          </Key>
+          <Property Name="cUser_Id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="cUser_Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="cUser_Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="iAuthMode" Type="int" />
+          <Property Name="cDepName" Type="nvarchar" MaxLength="50" />
+          <Property Name="cEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="cMobilePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="bStop" Type="bit" Nullable="false" />
+          <Property Name="bLogined" Type="bit" Nullable="false" />
+          <Property Name="iErrorCount" Type="int" />
+          <Property Name="dLastLoginDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UAD_UserRole">
+          <Key>
+            <PropertyRef Name="cUser_Id" />
+            <PropertyRef Name="cRole_Id" />
+          </Key>
+          <Property Name="cUser_Id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="cRole_Id" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_UAD_USER_REFERENCE_UAD_ROLE">
+          <End Role="UAD_Role" Type="Self.UAD_Role" Multiplicity="1" />
+          <End Role="UAD_UserRole" Type="Self.UAD_UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UAD_Role">
+              <PropertyRef Name="cRole_Id" />
+            </Principal>
+            <Dependent Role="UAD_UserRole">
+              <PropertyRef Name="cRole_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UAD_USER_REFERENCE_UAD_USER">
+          <End Role="UAD_User" Type="Self.UAD_User" Multiplicity="1" />
+          <End Role="UAD_UserRole" Type="Self.UAD_UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UAD_User">
+              <PropertyRef Name="cUser_Id" />
+            </Principal>
+            <Dependent Role="UAD_UserRole">
+              <PropertyRef Name="cUser_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NYModelStoreContainer">
+          <EntitySet Name="UAD_Role" EntityType="Self.UAD_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UAD_User" EntityType="Self.UAD_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UAD_UserRole" EntityType="Self.UAD_UserRole" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_UAD_USER_REFERENCE_UAD_ROLE" Association="Self.FK_UAD_USER_REFERENCE_UAD_ROLE">
+            <End Role="UAD_Role" EntitySet="UAD_Role" />
+            <End Role="UAD_UserRole" EntitySet="UAD_UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UAD_USER_REFERENCE_UAD_USER" Association="Self.FK_UAD_USER_REFERENCE_UAD_USER">
+            <End Role="UAD_User" EntitySet="UAD_User" />
+            <End Role="UAD_UserRole" EntitySet="UAD_UserRole" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NY.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UAD_Role">
+          <Key>
+            <PropertyRef Name="cRole_Id" />
+          </Key>
+          <Property Name="cRole_Id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cRole_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cMemo" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UAD_User" Relationship="Self.UAD_UserRole" FromRole="UAD_Role" ToRole="UAD_User" />
+          <Property Name="bAdmin" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UAD_User">
+          <Key>
+            <PropertyRef Name="cUser_Id" />
+          </Key>
+          <Property Name="cUser_Id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cUser_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="cUser_Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="iAuthMode" Type="Int32" />
+          <Property Name="cDepName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cMobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bStop" Type="Boolean" Nullable="false" />
+          <Property Name="bLogined" Type="Boolean" Nullable="false" />
+          <Property Name="iErrorCount" Type="Int32" />
+          <Property Name="dLastLoginDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="UAD_Role" Relationship="Self.UAD_UserRole" FromRole="UAD_User" ToRole="UAD_Role" />
+        </EntityType>
+        <Association Name="UAD_UserRole">
+          <End Role="UAD_Role" Type="Self.UAD_Role" Multiplicity="*" />
+          <End Role="UAD_User" Type="Self.UAD_User" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="UADSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UAD_Role" EntityType="Self.UAD_Role" />
+          <EntitySet Name="UAD_User" EntityType="Self.UAD_User" />
+          <AssociationSet Name="UAD_UserRole" Association="Self.UAD_UserRole">
+            <End Role="UAD_Role" EntitySet="UAD_Role" />
+            <End Role="UAD_User" EntitySet="UAD_User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NYModelStoreContainer" CdmEntityContainer="UADSystemEntities">
+          <EntitySetMapping Name="UAD_Role">
+            <EntityTypeMapping TypeName="NY.Model.UAD_Role">
+              <MappingFragment StoreEntitySet="UAD_Role">
+                <ScalarProperty Name="bAdmin" ColumnName="bAdmin" />
+                <ScalarProperty Name="cRole_Id" ColumnName="cRole_Id" />
+                <ScalarProperty Name="cRole_Name" ColumnName="cRole_Name" />
+                <ScalarProperty Name="cMemo" ColumnName="cMemo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UAD_User">
+            <EntityTypeMapping TypeName="NY.Model.UAD_User">
+              <MappingFragment StoreEntitySet="UAD_User">
+                <ScalarProperty Name="cUser_Id" ColumnName="cUser_Id" />
+                <ScalarProperty Name="cUser_Name" ColumnName="cUser_Name" />
+                <ScalarProperty Name="cUser_Password" ColumnName="cUser_Password" />
+                <ScalarProperty Name="iAuthMode" ColumnName="iAuthMode" />
+                <ScalarProperty Name="cDepName" ColumnName="cDepName" />
+                <ScalarProperty Name="cEmail" ColumnName="cEmail" />
+                <ScalarProperty Name="cMobilePhone" ColumnName="cMobilePhone" />
+                <ScalarProperty Name="bStop" ColumnName="bStop" />
+                <ScalarProperty Name="bLogined" ColumnName="bLogined" />
+                <ScalarProperty Name="iErrorCount" ColumnName="iErrorCount" />
+                <ScalarProperty Name="dLastLoginDate" ColumnName="dLastLoginDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="UAD_UserRole" TypeName="NY.Model.UAD_UserRole" StoreEntitySet="UAD_UserRole">
+            <EndProperty Name="UAD_Role">
+              <ScalarProperty Name="cRole_Id" ColumnName="cRole_Id" />
+            </EndProperty>
+            <EndProperty Name="UAD_User">
+              <ScalarProperty Name="cUser_Id" ColumnName="cUser_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NY.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:NY.Framework.Voucher.VoucherTemplateConfiguration">
+            <summary>
+            Author:xxp
+            Remark:单据模板配置类
+            CreateTime:20160113
+            </summary>
+        </member>
+        <member name="F:NY.Framework.Voucher.VoucherTemplateConfiguration.toolTip1">
+            <summary>
+            提示控件
+            </summary>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateConfiguration.GridView_SelectionChanged(System.Object,DevExpress.Data.SelectionChangedEventArgs)">
+            <summary>
+            选择事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateConfiguration.HeadRefer_ButtonClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            单据体 参照控件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateConfiguration.Head_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            单据头校验事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateConfiguration.BodyRefer_ButtonClick(System.Object,DevExpress.XtraEditors.Controls.ButtonPressedEventArgs)">
+            <summary>
+            表体参照事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateConfiguration.Body_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            表体验证事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.VT_CardNum">
+            <summary>
+            单据编号
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.VT_Title">
+            <summary>
+            单据标题
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.VT_Code">
+            <summary>
+            模板编码
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.VT_Mode">
+            <summary>
+            模板类型,0:显示,1:打印
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.dtColumns">
+            <summary>
+            列配置DataTable
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.model">
+            <summary>
+            单据头
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.modelSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.modelItem">
+            <summary>
+            单据体
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.modelItemSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.CurrForm">
+            <summary>
+            当前窗体
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.VoucherTemplateConfiguration.BodyGridView">
+            <summary>
+            表体
+            </summary>
+        </member>
+        <member name="E:NY.Framework.Voucher.VoucherTemplateConfiguration.CustomHead_Validating">
+            <summary>
+            自定义单据头验证事件
+            </summary>
+        </member>
+        <member name="E:NY.Framework.Voucher.VoucherTemplateConfiguration.CustomBody_Validating">
+            <summary>
+            自定义表体验证事件
+            </summary>
+        </member>
+        <member name="T:NY.Framework.Voucher.ListTemplateConfiguration">
+            <summary>
+            Author:xxp
+            Remark:列表模板配置类
+            CreateTime:20160113
+            </summary>
+        </member>
+        <member name="F:NY.Framework.Voucher.ListTemplateConfiguration.toolTip1">
+            <summary>
+            提示控件
+            </summary>
+        </member>
+        <member name="M:NY.Framework.Voucher.ListTemplateConfiguration.GridView_SelectionChanged(System.Object,DevExpress.Data.SelectionChangedEventArgs)">
+            <summary>
+            选择事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:NY.Framework.Voucher.ListTemplateConfiguration.VT_CardNum">
+            <summary>
+            单据编号
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.ListTemplateConfiguration.VT_Name">
+            <summary>
+            单据名称
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.ListTemplateConfiguration.bSelect">
+            <summary>
+            是否勾选
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.ListTemplateConfiguration.dtColumns">
+            <summary>
+            列配置DataTable
+            </summary>
+        </member>
+        <member name="P:NY.Framework.Voucher.ListTemplateConfiguration.gcmMoreCheck">
+            <summary>
+            多选控件
+            </summary>
+        </member>
+        <member name="T:NY.Framework.Voucher.VouchTemplateType">
+            <summary>
+            Author:xxp
+            Remark: 单据模板类型 Voucher:单据,Print:打印或数据,List:列表
+            CreateTime:20160113
+            </summary>
+        </member>
+        <member name="T:NY.Framework.Voucher.TemplateInitTool">
+            <summary>
+            Author:xxp
+            Remark:模版初始化类
+            CreateTime:20160113
+            </summary>
+        </member>
+        <member name="M:NY.Framework.Voucher.TemplateInitTool.GetListTemplate">
+            <summary>
+            获取单据列表模板Table结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.TemplateInitTool.GetVoucherTemplate">
+            <summary>
+            获取单据模板Table结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NY.Framework.Voucher.VoucherDataTool">
+            <summary>
+            Author:xxp
+            Remark:单据数据处理
+            CreateTime:20160510
+            </summary>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.VoucherDataBindings(DevExpress.XtraLayout.LayoutControlGroup,System.Windows.Forms.BindingSource,System.Data.DataColumnCollection)">
+            <summary>
+            动态给控件绑定数据源
+            </summary>
+            <param name="lcGroup"></param>
+            <param name="modelSource"></param>
+            <param name="dataColumnCollection"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.VoucherDataBindings(DevExpress.XtraLayout.LayoutControlGroup,System.Windows.Forms.BindingSource)">
+            <summary>
+            动态给控件绑定数据源
+            </summary>
+            <param name="lcGroup"></param>
+            <param name="modelSource"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.GetDataJson(System.Data.DataTable,System.Data.DataTable,System.String)">
+            <summary>
+            将根据配置文件和数据生成Json字符串
+            </summary>
+            <param name="dtConfig">配置Table</param>
+            <param name="dtData">数据Table</param>
+            <param name="strCardSection">位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.GetValueByDataType(System.String,System.Type)">
+            <summary>
+            根据数据类型获取相应的Json值
+            </summary>
+            <param name="strValue"></param>
+            <param name="tDataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.CheckData(System.Data.DataTable,System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            检查数据
+            </summary>
+            <param name="dtConfig">配置Table</param>
+            <param name="dtData">数据Table</param>
+            <param name="strCardSection">所在位置</param>
+            <param name="errorMsg">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.SetDefaultValue(System.Data.DataTable,System.String,System.Data.DataRow)">
+            <summary>
+            默认值设置
+            </summary>
+            <param name="dtConfig">配置Table</param>
+            <param name="strCardSection">所在位置</param>
+            <param name="dDataRow">数据Table</param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.DataRule(System.Data.DataTable,System.Data.DataRow,System.String,System.String)">
+            <summary>
+            公式计算
+            </summary>
+            <param name="dtConfig">配置Table</param>
+            <param name="dDataRow">数据行</param>
+            <param name="strCardSection">所在位置</param>
+            <param name="strFileName">变更字段</param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.DataRulCompute(System.String,System.Data.DataRow)">
+            <summary>
+            公式计算
+            </summary>
+            <param name="strDataRule">计算公式</param>
+            <param name="dDataRow">取值数据行</param>
+            <returns>返回计算后值</returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherDataTool.CusGridView_SelectionChanged(System.Object,DevExpress.Data.SelectionChangedEventArgs,System.Windows.Forms.ToolTip)">
+            <summary>
+            自定义列表单元格汇总方法
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="toolTip1"></param>
+        </member>
+        <member name="T:NY.Framework.Voucher.VoucherTemplateTool">
+            <summary>
+            Author:xxp
+            Remark:单据模版工具类
+            CreateTime:20160113 11:39
+            </summary>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateTool.GetListTemplateConfig(System.String,System.String)">
+            <summary>
+            获取列表配置信息
+            </summary>
+            <param name="strVT_CardNum">单据编号</param>
+            <param name="strFilePath">配置文件地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateTool.GetVoucherTemplateConfig(System.String,System.String,System.String)">
+            <summary>
+            获取单据配置信息
+            </summary>
+            <param name="strVT_CardNum">单据编号</param>
+            <param name="strVT_Code">模板编号</param>
+            <param name="strFilePath">配置文件地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateTool.SetListGridView(NY.Framework.Voucher.ListTemplateConfiguration,DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.Boolean)">
+            <summary>
+            设置列表显示
+            </summary>
+            <param name="templateCofig">列表配置</param>
+            <param name="dgv">GridView控件</param>
+            <param name="strLocalCacheLayoutFilePath">本地缓存文件</param>
+            <param name="bolClearColumns">是否清空</param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateTool.SetVoucherControl(NY.Framework.Voucher.VoucherTemplateConfiguration,System.Windows.Forms.Control,DevExpress.XtraGrid.Views.Grid.GridView,System.String)">
+            <summary>
+            设置单据显示
+            </summary>
+            <param name="templateCofig">单据配置</param>
+            <param name="control">控件</param>
+            <param name="dgv">列表控件</param>
+            <param name="strLocalCacheLayoutFilePath">本地缓存文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateTool.SetFormat(DevExpress.XtraGrid.Columns.GridColumn,System.String)">
+            <summary>
+            设置栏目格式
+            </summary>
+            <param name="gc"></param>
+            <param name="strFormat"></param>
+        </member>
+        <member name="M:NY.Framework.Voucher.VoucherTemplateTool.SetAlignment(DevExpress.XtraGrid.Columns.GridColumn,System.Int32)">
+            <summary>
+            设置栏目格式
+            </summary>
+            <param name="gc">列表</param>
+            <param name="iAlignment">位置:1:Near,2:Center,3:Far</param>
+        </member>
+    </members>
+</doc>
